@@ -1,0 +1,28 @@
+.btn {
+  background-color: rgb(166, 98, 230);
+}
+
+textarea {
+  resize: none;
+}
+
+.btnId {
+  margin-left: 5%;
+  background-color: rgb(131, 131, 131);
+}
+
+.btnId2 {
+  margin-left: 5%;
+  background-color: rgb(78, 160, 163);
+  margin-top: 10%;
+}
+
+.btnEliminar {
+  margin-left: 5%;
+  background-color: red;
+}
+
+span{
+  color: red;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

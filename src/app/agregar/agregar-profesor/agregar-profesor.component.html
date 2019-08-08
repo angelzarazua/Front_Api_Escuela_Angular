@@ -1,0 +1,56 @@
+<form [formGroup]="formAgregar" class="border p-5 form">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 center">
+      <h1 *ngIf='this.id != null'>DATOS DEL PROFESOR</h1>
+      <h1 *ngIf='this.id == null'>AGREGAR PROFESOR</h1><br>
+
+      <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" formControlName="nombre" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Apellido Paterno</label>
+        <input type="text" formControlName="apellido_paterno" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Apellido Materno</label>
+        <input type="text" formControlName="apellido_materno" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Edad</label>
+        <input type="number" formControlName="edad" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Dirección</label>
+        <input type="text" formControlName="direccion" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Correo electrónico</label>
+        <input type="email" formControlName="correo_electronico" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Género</label>
+        <select formControlName="genero" class="form-control">
+          <option value="2">Masculino</option>
+          <option value="1">Femenino</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-2">
+        <button *ngIf='this.id != null ' [routerLink]="['/profesores', profesor.id, 'cargarMaterias']" class="btn btn-default btnId2">Cargar Materias</button>
+        <button *ngIf='this.id != null ' [routerLink]="['/profesores', profesor.id, 'materias']" class="btn btn-default btnId2">Materias asignadas</button>
+        <button *ngIf='this.id != null' [routerLink]="['/profesores', profesor.id, 'alumnos']" class="btn btn-default btnId2">Alumnos asignados</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <button *ngIf='this.id == null' (click)="agregar()" class="btn btn-default">Agregar</button>
+    <button *ngIf='this.id != null' (click)="guardar()" class="btn btn-default btnId">Guardar</button>
+    <button *ngIf='this.id != null' (click)="eliminar()" class="btn btn-default btnEliminar">Eliminar</button>    
+  </div>
+
+
+
+</form>

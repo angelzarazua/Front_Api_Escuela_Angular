@@ -1,0 +1,31 @@
+<div class="container"><br>
+</div>
+
+<!-- <div class="container" id="todoTabla"> -->
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-5">
+    <h1>Materias asignadas</h1><br>
+  </div>
+</div>
+<div class="row" id="todoTabla">
+  <div class="col-md-3"></div>
+  <div class="col-md-3">
+
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Materias</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let materia of materias">
+          <th scope="row">{{materia.nombre_materia}}</th>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- </div> -->

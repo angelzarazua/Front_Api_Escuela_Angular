@@ -1,0 +1,72 @@
+<form [formGroup]="formAgregar" class="border p-5 form">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8 center">
+      <h1 *ngIf='this.id == null'>AGREGAR ALUMNO</h1>
+      <h1 *ngIf='this.id != null'>DATOS DEL ALUMNO</h1><br>
+
+      <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" formControlName="nombre" class="form-control">
+        <span *ngIf="formAgregar.get('nombre').touched && formAgregar.get('nombre').hasError('required') ">Required</span>
+
+        <!-- <app-materias-alumno [name]="nombre"></app-materias-alumno> -->
+      </div>
+      <div class="form-group">
+        <label for="">Apellido Paterno</label>
+        <input type="text" formControlName="apellido_paterno" class="form-control">
+        <span *ngIf="formAgregar.get('apellido_paterno').touched && formAgregar.get('apellido_paterno').hasError('required') ">Required</span>
+      </div>
+      <div class="form-group">
+        <label for="">Apellido Materno</label>
+        <input type="text" formControlName="apellido_materno" class="form-control">
+        <span *ngIf="formAgregar.get('apellido_materno').touched && formAgregar.get('apellido_materno').hasError('required') ">Required</span>
+
+      </div>
+      <div class="form-group">
+        <label for="">Edad</label>
+        <input type="number" formControlName="edad" class="form-control">
+        <span *ngIf="formAgregar.get('edad').touched && formAgregar.get('edad').hasError('required') ">Required</span>
+
+      </div>
+      <div class="form-group">
+        <label for="">Dirección</label>
+        <input type="text" formControlName="direccion" class="form-control">
+        <span *ngIf="formAgregar.get('direccion').touched && formAgregar.get('direccion').hasError('required') ">Required</span>
+
+      </div>
+      <div class="form-group">
+        <label for="">Correo electrónico</label>
+        <input type="email" formControlName="correo_electronico" class="form-control">
+        <span *ngIf="formAgregar.get('correo_electronico').touched && formAgregar.get('correo_electronico').hasError('required') ">Required</span>
+        <span *ngIf="formAgregar.get('correo_electronico').touched && formAgregar.get('correo_electronico').hasError('pattern')">Email is invalid</span>
+      </div>
+      <div class="form-group">
+        <label for="">Género</label>
+        <select formControlName="genero" class="form-control">
+          <option value="2">Masculino</option>
+          <option value="1">Femenino</option>
+        </select>
+        <span *ngIf="formAgregar.get('genero').touched && formAgregar.get('genero').hasError('required') ">Required</span>
+
+      </div>
+    </div>
+    <div class="col-md-2">
+        <button *ngIf='this.id != null' [routerLink]="['/alumnos', alumno.id, 'cargarMaterias']" class="btn btn-default btnId2">Cargar materias</button>
+        <button *ngIf='this.id != null' [routerLink]="['/alumnos', alumno.id, 'materias']" class="btn btn-default btnId2">Materias asignadas</button>
+        <button *ngIf='this.id != null' [routerLink]="['/alumnos', alumno.id, 'profesores']" class="btn btn-default btnId2">Profesores asignados</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <button *ngIf='this.id == null' (click)="agregar()" class="btn btn-default" [disabled]="formAgregar.invalid">Agregar</button>
+    <button *ngIf='this.id != null' (click)="guardar()" class="btn btn-default btnId" [disabled]="formAgregar.invalid">Guardar</button>
+    <button *ngIf='this.id != null' (click)="eliminar()" class="btn btn-default btnEliminar">Eliminar</button>
+  </div>
+
+
+</form>
+
+<!-- <button id="b" (click)="esconderProfesor()">Esconder</button> -->

@@ -1,0 +1,21 @@
+urlpatterns = [
+    url(r'^genero/$', views.Genero.as_view()),
+
+    url(r'^asignatura/$', views.Asignatura.as_view()),
+    url(r'^detalles_asignatura/(?P<id>\d+)$', views.UnaAsignatura.as_view()),
+    url(r'^detalles_asignatura_profe/(?P<id>\d+)$', views.MateriasProfe.as_view()),
+    url(r'^detalles_asignatura_alumno/(?P<id>\d+)$', views.MateriaAlumno.as_view()),
+
+    url(r'^profesores/$', views.Profesores.as_view()),
+    url(r'^detalles_profesor/(?P<id>\d+)$', views.UnProfesor.as_view()), // my_matery_professor
+    url(r'^detalles_profesor_materia/(?P<id>\d+)$', views.ProfesorMateria.as_view()),
+    url(r'^detalles_profesor_alumno/(?P<id>\d+)$', views.ProfeAlumnos.as_view()),
+
+    url(r'^alumnos/$', views.Alumnos.as_view()),
+    url(r'^detalles_alumno/(?P<id>\d+)$', views.UnAlumno.as_view()),
+    url(r'^detalles_alumno_materia/(?P<id>\d+)$', views.AlumnoMateria.as_view()), //my_matery_professor, professor
+    url(r'^detalles_alumno_profesor/(?P<id>\d+)$', views.AlumnoProfesor.as_view()),
+]
+
+idObtenidoMateria = s.initial_data['my_matery']
+idObtenidoProfesor = s.initial_data['my_profesor']

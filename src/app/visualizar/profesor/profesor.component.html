@@ -1,0 +1,35 @@
+<div class="container"><br>
+  <h1>PROFESORES</h1>
+</div>
+<div class="container" id="todoTabla">
+  <div class="row">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Profesor</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Dirección</th>
+          <th scope="col">Correo electrónico</th>
+          <th scope="col">Género</th>
+          <th scope="col">Detalles</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let profesor of profesores">
+            <th scope="row" >{{profesor.id}}</th>
+            <td>{{profesor.nombre}} {{profesor.apellido_paterno}} {{profesor.apellido_materno}}</td>
+            <td>{{profesor.edad}}</td>
+            <td>{{profesor.direccion}}</td>
+            <td>{{profesor.correo_electronico}}</td>
+            <td>
+              <p >{{profesor.genero_id}}</p>
+            </td>
+            <td><button type="button" class="btn btn-dark" [routerLink]="['/profesores', profesor.id]">Detalles</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

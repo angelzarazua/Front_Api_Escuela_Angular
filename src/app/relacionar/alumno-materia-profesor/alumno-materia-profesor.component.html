@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <h1>Elige tu profesor</h1>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Profesor</th>
+          <th scope="col">Cargar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let profesor of profesores" >
+          <th scope="row">{{profesor.nombre}}</th>
+          <th scope="row"><button (click)="agregar(profesor.id)" type="button" class="btn btn-dark" >Elegir</button></th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

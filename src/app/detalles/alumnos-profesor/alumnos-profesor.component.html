@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6"><br>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Alumno</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let alumno of alumnos">
+            <th scope="row">{{alumno.nombre}} {{alumno.apellido_paterno}} {{alumno.apellido_materno}}</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

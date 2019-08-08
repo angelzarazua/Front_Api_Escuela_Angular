@@ -1,0 +1,37 @@
+<div class="container"><br>
+  <h1>Alumnos</h1>
+</div>
+
+<div class="container" id="todoTabla">
+  <div class="row">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Alumno</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Dirección</th>
+          <th scope="col">Correo electrónico</th>
+          <th scope="col">Género</th>
+          <th scope="col">Detalles</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let alumno of alumnos">
+          <th scope="row" >{{alumno.id}}</th>
+          <td>{{alumno.nombre}} {{alumno.apellido_paterno}} {{alumno.apellido_materno}}</td>
+          <td>{{alumno.edad}}</td>
+          <td>{{alumno.direccion}}</td>
+          <td>{{alumno.correo_electronico}}</td>
+          <td>
+            <p>{{alumno.genero_id}}</p>
+          </td>
+          <td><button type="button" class="btn btn-dark" [routerLink]="['/alumnos', alumno.id]">Detalles</button></td>
+
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

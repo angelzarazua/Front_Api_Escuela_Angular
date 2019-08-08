@@ -1,0 +1,9 @@
+.btnId {
+    margin-left: 5%;
+    background-color: rgb(131, 131, 131)
+  }
+  
+  .btnEliminar {
+    margin-left: 5%;
+    background-color: red;
+  }

@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6"><br>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Materia</th>
+          <th scope="col">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let materia of materias">
+          <th scope="row">{{materia.nombre_materia}}</th>
+          <td><button (click)="eliminar(materia.id)" type="button" class="btn btn-dark">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

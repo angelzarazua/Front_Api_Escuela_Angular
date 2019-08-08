@@ -1,0 +1,29 @@
+<form [formGroup]="formAgregar" class="border p-5 form">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 center">
+      <h1>AGREGAR MATERIA</h1><br>
+
+      <div class="form-group">
+        <label>Nombre de la materia</label>
+        <input type="text" formControlName="nombre_materia" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Hora de Inicio</label>
+        <input type="time" formControlName="horario_inicio" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Hora Final</label>
+        <input type="time" formControlName="horario_fin" class="form-control">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <button *ngIf='this.id == null' (click)="agregar()" class="btn btn-default">Agregar</button>
+    <button *ngIf='this.id != null' (click)="guardar()" class="btn btn-default btnId">Guardar</button>
+    <button *ngIf='this.id != null && this.tamAlumo == 0 || this.tamMateria == 0' (click)="eliminar()" class="btn btn-default btnEliminar">Eliminar</button>
+  </div>
+
+</form>

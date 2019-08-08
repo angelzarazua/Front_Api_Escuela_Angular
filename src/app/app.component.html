@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!--<div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -16,6 +16,20 @@
   <li>
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
-</ul>
+</ul> -->
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-10">
+      <button routerLink="/home" class="btn btn-default" id="menuButton">Home</button>
+      <button routerLink="/alumnos/agregar" class="btn btn-default" id="menuButton">Agregar Alumno</button>
+      <button routerLink="/profesores/agregar" class="btn btn-default" id="menuButton">Agregar Profesor</button>
+      <button routerLink="/materias/agregar" class="btn btn-default" id="menuButton">Agregar Materia</button>
+      <button routerLink="/alumnos/all" class="btn btn-default" id="menuButton">Ver Alumnos</button>
+      <button routerLink="/profesores/all" class="btn btn-default" id="menuButton">Ver Profesores</button>
+      <button routerLink="/materias/all" class="btn btn-default" id="menuButton">Ver Materias</button>
+
+
+    </div>
+  </div>
 
 <router-outlet></router-outlet>

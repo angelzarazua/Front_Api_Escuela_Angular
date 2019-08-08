@@ -1,0 +1,24 @@
+.btn {
+  background-color: rgb(134, 62, 202);
+}
+
+textarea {
+  resize: none;
+}
+
+.btnId {
+  margin-left: 5%;
+  background-color: rgb(131, 131, 131)
+}
+
+.btnId2 {
+  margin-left: 5%;
+  background-color: rgb(78, 160, 163);
+  margin-top: 10%;
+}
+
+
+.btnEliminar {
+  margin-left: 5%;
+  background-color: red;
+}

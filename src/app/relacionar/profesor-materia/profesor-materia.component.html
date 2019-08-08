@@ -1,0 +1,23 @@
+<form [formGroup]="formAgregar" class="border p-5 form">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8"><br>
+      <h1>Materias</h1>
+        <p>Seleccione las materias a su disposición</p>
+        <!-- <div class="form-check" *ngFor="let materia of materias">
+        <input class="form-check-input" type="checkbox" id="{{materia.id}}" formControlName="my_matery_professor" (change)="selectMateria($event, materia.id)">
+        <label class="form-check-label" for="{{materia.id}}">{{materia.nombre_materia}}</label>
+      </div> -->
+
+        <div class="form-check" *ngFor="let materia of materias">
+          <input class="form-check-input" type="checkbox" id="{{materia.id}}" formControlName="my_matery_professor"
+            (change)="selectMateria($event, materia.id)">
+          <label class="form-check-label" for="{{materia.id}}">{{materia.nombre_materia}}</label>
+        </div>
+
+      <button (click)="cargarMaterias()"  class="btn btn-default">Cargar Materias:</button>
+
+
+    </div>
+  </div>
+</form>

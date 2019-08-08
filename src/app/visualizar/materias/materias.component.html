@@ -1,0 +1,30 @@
+<div class="container"><br>
+    <h1>Asignaturas</h1>
+</div>
+
+<div class="container" id="todoTabla">
+  <div class="row">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nombre de la materia</th>
+          <th scope="col">Hora Inicio</th>
+          <th scope="col">Hora Final</th>
+          <th scope="col">Detalles</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let materia of materias">
+            <th scope="row" >{{materia.id}}</th>
+            <td>{{materia.nombre_materia}}</td>
+            <td>{{materia.horario_inicio}}</td>
+            <td>{{materia.horario_fin}}</td>
+            <td><button type="button" class="btn btn-dark" [routerLink]="['/materias', materia.id]">Detalles</button></td>
+          </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

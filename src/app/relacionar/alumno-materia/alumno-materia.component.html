@@ -1,0 +1,21 @@
+
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+  <h1>Materias a cargar</h1>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Materia</th>
+          <th scope="col">Detalles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let materia of materias" >
+          <th scope="row">{{materia.nombre_materia}}</th>
+          <th scope="row"><button  type="button" class="btn btn-dark" [routerLink]="['/alumnos', id, 'cargarMaterias', materia.id, 'cargarProfesor']">Cargar</button></th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
